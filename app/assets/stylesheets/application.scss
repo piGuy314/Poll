@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+
+
+
+// Typography Styles//
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2,h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size:22px;
+}
+
+h5 {
+  font-family: 'inherit', sans-serif;
+  font-size:14px;
+}
+
+.newPost {
+  position: relative;
+}
+
+.navbar {
+  background: lightblue;
+}
+
+
+// Nav Styles //
+.navbar {
+    border:none;
+}
+
+.navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav li a {
+    color:black;
+    &:hover{
+        color:white;
+        opacity:0.75;
+    }
+}
+
+.navbar-nav {
+  text-align:center;
+  float:none;
+}
+  .navbar-nav li {
+      display:inline-block;
+      float:none;
+  }
+
+  #footer{
+   background-color: lightgray;
+   padding-top: 10px;
+   padding-bottom: 0px;
+   position:absolute;
+   bottom:0px;
+   width:100%;
+}
