@@ -33,9 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootstrap'
+#Use Twitter Bootstrap Library for front-end UI and Layout
+gem 'bootstrap-sass', '~> 3.3.7'
 
-gem 'jquery-rails', '4.1.1'
+gem 'autoprefixer-rails'
+
+gem 'jquery-rails'
+
 
 gem 'pusher'
 gem 'figaro'
