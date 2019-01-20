@@ -1,4 +1,6 @@
+
 Rails.application.routes.draw do
+  devise_for :installs
   resources :links
   get 'home/index'
 
