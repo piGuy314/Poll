@@ -26,3 +26,23 @@
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
+
+.navbar {
+  background: white;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: Black;
+}
+.navbar-default .navbar-brand:hover {
+  color: lightgray;
+  opacity: 0.75;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: darkgray;
+  opacity: 1;
+}
