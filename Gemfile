@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Use Devise for user authentication
 gem 'devise', '~> 4.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,6 +42,8 @@ gem 'font-awesome-sass', '4.6.2'
 
 # Use Hirb for better database table display in console
 gem 'hirb', '0.7.3'
+
+
 
 gem 'autoprefixer-rails'
 
