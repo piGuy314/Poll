@@ -29,7 +29,14 @@
       </div>
     </nav>
 
-    <div class="container">
-      <%= yield %>
+      <div class="container">
+        <div class ="text-center">
+        <% flash.each do |type, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+        <% end %>
+      </div>
     </div>
-  </body>
+    
+  <%= yield %>
+
+</body>
