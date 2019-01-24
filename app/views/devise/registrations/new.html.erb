@@ -4,53 +4,19 @@
       <div class="well">
 
         <% if params[:plan] == '2' %>
-          <h2>Pro Account Sign Up Form</h2>
+          <%= render "pro_form" %>
         <% else %>
-          <h2>Sign up for a free account</h2>
+          <%= render "basic_form" %>
         <% end %>
 
-
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-          <div class="field form-group">
-            <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-          </div>
-          <div class="field form-group">
-            <%= f.label :password %>
-            <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %>
-            <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-          </div>
-          <div class="field form-group">
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-          </div>
-          <div class="actions form-group">
-            <%= f.submit "Sign up", class: 'btn btn-success' %>
-          </div>
-        <% end %>
         <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
 </div>
+<div class="container home-signup-links">
+
 <div class="home-callout text-center container-fluid">
 </div>
 <br>
 <br>
-
-<div class="container home-signup-links">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-    <div class="center-text">
-      <div class="well">
-        <h2 class="text-center">Pro Membership</h2>
-        <h4 class="text-center">Sign up for the pro account for $10/month and get access premium content!</h4>
-        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan), class: 'btn btn-success btn-lg btn-block' %>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
