@@ -8,6 +8,13 @@ end
 # Use Devise for user authentication
 gem 'devise', '~> 4.5'
 
+#Use Stripe for payment processing
+gem 'stripe', '1.48.0'
+
+#Use Figaro for ENV variables
+gem 'figaro', '1.1.1'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 
@@ -51,7 +58,7 @@ gem 'jquery-rails'
 
 
 gem 'pusher'
-gem 'figaro'
+
 gem 'chartkick'
 
 group :development, :test do
