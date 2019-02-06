@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20190202222239) do
     t.string "first_name"
     t.string "last_name"
     t.string "gender"
-    t.string "age"
     t.string "zip_code"
     t.string "contact_email"
     t.text "description"
