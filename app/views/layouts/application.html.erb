@@ -27,14 +27,18 @@
           <div class="nav navbar-nav navbar-right">
             <div class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
-              <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"btn btn-default navbar-but" %>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
               <% else %>
-              <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
-              <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default navbar-btn" %>
+              <li><%= link_to "Log In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
               <%end%>
             </div>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Plans", about_path%></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Community",users_path %></li>
+              <li><%= link_to "My Profile", user_path(current_user.id) %></li>
+            <% end %>
+            <li><%= link_to "About", about_path%></li>
             <li><%= link_to "Contact Us", new_contact_path %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
