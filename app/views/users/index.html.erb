@@ -1,6 +1,37 @@
 
 <div class="container">
   <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <ul class="list-unstyled">
+        <% @users.each do |user| %>
+        <% if user.profile %>
+        <li>
+          <div class="well row <%= cycle('white-bg', '') %>">
+            <div class="col-sm-4 text-center">
+              <% if user.profile.avatar %>
+              <%= link_to user do %>
+              <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+              <% end %>
+              <% end %>
+            </div>
+            <div>
+              <%= link_to user do %>
+              <h3><%= user.profile.first_name %> <%= user.profile.last_name %></h3>
+              <% end %>
+              <p><%= user.profile.gender %></p>
+            </div>
+            </li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+
+<!--
+<div class="container">
+  <div class="row">
     <div class="text-center">
       <div class="text-center col-md-4 col-md-offset-2">
       <ul>
@@ -15,3 +46,4 @@
     </div>
   </div>
 </div>
+-->
