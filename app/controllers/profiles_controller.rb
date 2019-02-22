@@ -66,7 +66,7 @@ class ProfilesController < ApplicationController
       # Whitelist the form fields to prevent hackers from
       # adding additional form fields
       def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+        params.require(:profile).permit(:first_name, :last_name, :gender, :zip_code, :contact_email, :description)
       end
 
       # Prevents the user from editing other people's pages
