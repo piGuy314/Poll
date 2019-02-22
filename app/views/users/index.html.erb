@@ -10,11 +10,7 @@
         <li>
           <div class="well row <%= cycle('white-bg', '') %>">
             <div class="col-sm-4 text-center">
-              <% if user.profile.avatar %>
-              <%= link_to user do %>
-              <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
-              <% end %>
-              <% end %>
+
             </div>
             <div>
               <%= link_to user do %>
