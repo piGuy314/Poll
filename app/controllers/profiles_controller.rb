@@ -1,37 +1,40 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :only_current_user
 
-    # Do this before any of these actions
-    # authenticate user is from devise gem
-    before_action :authenticate_user!
+  # GET to /users/:user_id/profile/new
+  def new
+    # Render blank profile details form
+    @profile = Profile.new
+  end
 
-    before_action :only_current_user
+  def create
+    @user = User.find(params[:user_id])
+    @profile = @user.build_profile(profile_params)
 
-    # Makes takes user to a blank profile form
-    # GET to /users/:user_id/profile/new
-    def new
-      # Render blank profile details form
-      @profile = Profile.new
+    if @profile.save
+      flash[:success] = "Profile updated"
+      redirect_to user_path(params[:user_id])
+    else
+      render action: :new
     end
+  end
 
-    # Save it to the profile DB
-    # POST to /users/:user_id/profile
-    def create
-      # Ensure that we have the user who is filling out form
-      @user = User.find(params[:user_id])
+  def edit
+    @user = User.find(params[:user_id])
+    @profile = @user.profile
+  end
 
-      # This will link the profile to the user that is logged in
-      @profile = @user.build_profile(profile_params)
-
-      # Show message is profile is updated successfully
-      if @profile.save
-        flash[:success] = "Profile updated!"
-        # Send to the user profile page
-        redirect_to user_path(params[:user_id])
-      else
-        # Refresh the page with a blank form
-        render action: :new
-      end
+  def update
+    @user = User.find(params[:user_id])
+    @profile = @user.profile
+    if @profile.update_attributes(profile_params)
+      flash[:success] = "Profile updated"
+      redirect_to user_path(params[:user_id])
+    else
+      render action: :edit
     end
+  end
 
     # GET to /users/:user_id/profile/edit
     def edit
