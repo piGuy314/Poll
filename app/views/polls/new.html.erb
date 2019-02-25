@@ -1,0 +1,7 @@
+<h2>New Polls</h2>
+
+<%=form_for :poll, url: polls_path do |f| %>
+<%= f.label :title %></br>
+<%= f.text_field :title %>
+<%= f.submit %>
+<% end %>

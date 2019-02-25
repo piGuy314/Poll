@@ -16,9 +16,11 @@
           <h3><%= @user.profile.zip_code %><br></h3>
           <h3><%= @user.profile.description %><br></h3>
     </div>
-        <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-lg btn-block'%>
-        <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-        <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-lg btn-block'%>
+      <%= link_to "Create a Poll!", '#', class: 'btn btn-default btn-sm btn-block'%>
+        <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-sm btn-block'%>
+        <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
+        <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
+
   </div>
 </div>
 </div>
