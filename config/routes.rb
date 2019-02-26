@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile
     resources :polls do
-    resource :poll
+    resource :comments
+    resources :posts
+    root "posts#index"
   end
 end
 
