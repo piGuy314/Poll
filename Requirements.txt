@@ -29,7 +29,7 @@
 * Each user can create a poll that displays on their profile and also in the community
 * Other users can vote on that Poll and their info is saved within the data base with
   their info (similar to when someone likes your status on FB)
-*
+* Can report on the user data from the votes in a graphical dashboard
 *
 *
 *
