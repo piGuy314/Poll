@@ -1,4 +1,4 @@
-User Profiles
+  User Profiles
 * Each user should have one profile
 * User should see link to new profile form upon signing up
 * User should be able to create and view their user profile
@@ -7,20 +7,31 @@ User Profiles
 
 
 ...
-Stripe Integration
+  Stripe Integration
 * Users should have a stripe customer token in the users table.
 * Javascript should prevent Pro form from submitting, when user fills it out,
-and should send card info to Stripe. Stripe will return with a card token.
+  and should send card info to Stripe. Stripe will return with a card token.
 * Javascript should send user fields and card token to our rails app. Rails app
-should validate the user fields. Rails app will note whether plan 1 or plan 2.
+  should validate the user fields. Rails app will note whether plan 1 or plan 2.
 * Once validated, Rails should send user info (email, plan id) and card token
-to Stripe server and Stripe will create a subscription and send back customer
-token. Rails should save customer token and user information to our database.
+  to Stripe server and Stripe will create a subscription and send back customer
+  token. Rails should save customer token and user information to our database.
 
 
-User Profiles
+  User Profiles
 * Each user should have one profile
 * User should see link to new profile form upon signing up
 * User should be able to create and view their user profile
 * User profile should have a profile picture
 * User should be able to view all user profiles
+
+  User polls
+* Each user can create a poll that displays on their profile and also in the community
+* Other users can vote on that Poll and their info is saved within the data base with
+  their info (similar to when someone likes your status on FB)
+*
+*
+*
+*
+*
+*
