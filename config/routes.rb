@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :links
   root to: 'pages#home'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do

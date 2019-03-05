@@ -14,7 +14,7 @@ class LinksController < ApplicationController
 
   # GET /links/new
   def new
-    @link = current_user.links.build
+    @link = current_user.links.build(link_params)
   end
 
   # GET /links/1/edit
