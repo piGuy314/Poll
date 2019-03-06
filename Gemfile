@@ -52,7 +52,7 @@ gem 'font-awesome-sass', '4.6.2'
 # Use Hirb for better database table display in console
 gem 'hirb', '0.7.3'
 
-
+gem 'rb-readline'
 
 gem 'autoprefixer-rails'
 
