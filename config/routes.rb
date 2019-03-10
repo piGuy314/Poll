@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :links
-  root to: 'pages#home'
+  root to: 'links#index'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
