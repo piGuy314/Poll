@@ -1,26 +1,25 @@
-<div id="content">
-<div id="left">
-  <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
-  <%= link_to "View My Profile", user_path(current_user.id), class: 'btn btn-default btn-sm btn-block' %>
-  <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
-  <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
-</div>
+<div id="content" >
+  <div id="left">
+    <% if user_signed_in? %>
+    <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
+    <%= link_to "View My Profile", user_path(current_user.id), class: 'btn btn-default btn-sm btn-block' %>
+    <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
+    <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
+    <%end%>
+  </div>
 
-
-
-
-<div id="right">
-<% @links.each do |link| %>
-  <div class="link row clearfix, container">
-    <div class ="well col-md-8>
-    <h2>
-      <%= link_to link.title, link %><br>
-      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %> </small>
-    </h2>
-</div>
-</div>
-  <% end %>
-</div>
+  <div id="middle">
+  <% @links.each do |link| %>
+    <div class="container">
+      <div class ="well ">
+      <h2>
+        <%= link_to link.title, link %><br>
+        <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %> </small>
+      </h2>
+  </div>
+  </div>
+    <% end %>
+  </div>
 
 
 </div>
