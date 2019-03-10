@@ -9,6 +9,10 @@ class ProfilesController < ApplicationController
     @profile = Profile.new
   end
 
+ def show
+   @profile = Profile.find(params[:profile_id])
+ end
+
   def create
     @user = User.find(params[:user_id])
     @profile = @user.build_profile(profile_params)
