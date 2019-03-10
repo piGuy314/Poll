@@ -1,16 +1,22 @@
+<div class ="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class ="well">
+      <h1 class="text-center">Your Poll</h1>
+      <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+      <p>
+        <strong>Title:</strong>
+        <%= @link.title %>
+      </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @link.title %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @link.url %>
-</p>
-<!--
-<%= link_to 'Edit', edit_link_path(@link) %> |
--->
-<%= link_to 'Back', links_path %>
+      <p>
+        <strong>Url:</strong>
+        <%= @link.url %>
+      </p>
+      <!--
+      <%= link_to 'Edit', edit_link_path(@link) %> |
+      -->
+      <%= link_to 'Back', links_path, class: "btn btn-md btn-success"  %>
+</div>
+</div>
+</div>
