@@ -26,32 +26,28 @@
 
     </div>
   </div>
-<% else %>
-<br>
-<br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="center-text">
+  <% else %>
+    <!-- Basic Membership -->
+    <div class="col-md-6">
       <div class="well">
         <h2 class="text-center">Basic Membership</h2>
-        <h4 class="text-center">Sign up for a free account!</h4>
-        <%= link_to "Sign Up for Free!", new_user_registration_path(plan: @basic_plan), class: 'btn btn-info btn-lg btn-block' %>
+        <h4 class="text-center">Sign up for free and get basic access to the community.</h4>
+        <br>
+
+        <!-- Using Query string parameters, we can pass info via URL -->
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
       </div>
     </div>
-  </div>
-</div>
-<br>
-<br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-   <div class="center-text">
-    <div class="well">
-      <h2 class="text-center">Pro Membership</h2>
-      <h4 class="text-center">Sign up for the pro account for $10/month and get access premium content!</h4>
-      <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan), class: 'btn btn-success btn-lg btn-block' %>
+
+    <!-- Pro Membership -->
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Pro Membership</h2>
+        <h4 class="text-center">Get access to the community and contact info for only $10/month!</h4>
+        <br>
+        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+      </div>
     </div>
-  </div>
- </div>
-</div>
-<% end %>
+
+  <% end %>
 </div>

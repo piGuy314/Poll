@@ -30,7 +30,7 @@
               <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
               <% else %>
               <li><%= link_to "Log In", new_user_session_path %></li>
-              <li><%= link_to "Sign Up for Free!", new_user_registration_path(plan: @basic_plan) %></li>
+              <li><%= link_to "Sign up with Basic", new_user_registration_path(plan: 1) %> </li>
               <%end%>
             </div>
           <ul class="nav navbar-nav navbar-right">
@@ -42,10 +42,12 @@
             <li><%= link_to "About Poll", about_path%></li>
 
           </ul>
+          <!--
           <%= form_tag("#", method: 'get', class: 'navbar-form navbar-right') do %>
   <%= search_field_tag 'search poll', nil, class: 'form-control', placeholder: 'Search Polls'  %>
   <%= submit_tag "Search", class: 'btn btn-default', :name => nil %>
 <% end %>
+-->
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
