@@ -1,5 +1,7 @@
 {
   "name": "Poll",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
