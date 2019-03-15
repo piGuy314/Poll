@@ -11,18 +11,32 @@
           <% end %>
   </div>
 
-  <div id="middle">
+<div id="middle">
   <% @links.each do |link| %>
     <div class="links-container">
-      <div class ="well ">
+    <div class ="well ">
       <h2>
-        <%= link_to link.title, link %><br>
-        <small class="author">Submitted <%= time_ago_in_words(link.created_at) %></br> by
-          <%= link.user.email %> </small>
+      <%= link_to link.title, link %><br>
+      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %></br> by
+      <%= link.user.email %> </small>
       </h2>
+
+    <div class="btn-group">
+      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
+      <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      Upvote
+      <%= link.get_upvotes.size %>
+      <% end %>
+      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-down">
+      Downvote
+    <%= link.get_downvotes.size %>
+  <% end %>
+
   </div>
-  </div>
-    <% end %>
+</div>
+<% end %>
 
 </br>
 </br>
@@ -30,7 +44,5 @@
 </br>
 </br>
 
-  </div>
-
-
+ </div>
 </div>
