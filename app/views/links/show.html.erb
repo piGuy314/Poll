@@ -1,23 +1,44 @@
 <div class ="row">
   <div class="col-md-6 col-md-offset-3">
     <div class ="well">
-      <h1 class="text-center">Your Poll</h1>
+      <h1 class="text-center">Poll Details</h1>
       <p id="notice"><%= notice %></p>
 
-      <p>
+      <h1>
         <strong>Title:</strong>
         <%= @link.title %>
-      </p>
+      </h1>
 
-      <p>
+      <h3>
         <strong>Url:</strong>
         <%= @link.url %>
-      </p>
+      </h3>
+
+
+      <%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      Yea
+      <%= @link.get_upvotes.size %>
+      <% end %>
+
+      <%= link_to dislike_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      Nay
+      <%= @link.get_downvotes.size %>
+
+      <% end %>
       <!--
       <%= link_to 'Edit', edit_link_path(@link) %> |
       -->
+      <% if @link.user == current_user -%>
+    	<div class="btn-group">
+    		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
+    		<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+    	</div>
+      <% end %>
       <div class="text-center">
-      <%= link_to 'Home', links_path, class: "btn btn-sm btn-success"  %>
+      <%= link_to 'Polls feed', links_path, class: "btn btn-sm btn-success"  %>
+
     </div>
 </div>
 </div>

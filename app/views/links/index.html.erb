@@ -1,8 +1,13 @@
 <div id="content" >
   <div id="left">
     <% if user_signed_in? %>
-          <h2 class="text-center"> Your Profile</h2>
+          <div class="text-center">
+            <h2> My Profile </h2>
+            </br>
+            <%= current_user.email  %> 
+          </div>
           <%if current_user.profile %>
+          <%= link_to "Create a Poll", new_link_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <%= link_to "View your profile", user_path(current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <% else %>
@@ -22,15 +27,14 @@
       </h2>
 
     <div class="btn-group">
-      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
       <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
-      Upvote
+      Yae
       <%= link.get_upvotes.size %>
       <% end %>
       <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-      <span class="glyphicon glyphicon-chevron-down">
-      Downvote
+      <span class="glyphicon glyphicon-chevron-down"></span>
+      Nay
     <%= link.get_downvotes.size %>
   <% end %>
 
