@@ -9,11 +9,13 @@
         <%= @link.title %>
       </h1>
 
+
+<!--
       <h3>
         <strong>Url:</strong>
         <%= @link.url %>
       </h3>
-
+-->
 
       <%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
@@ -26,7 +28,11 @@
       Nay
       <%= @link.get_downvotes.size %>
 
+
+
       <% end %>
+
+          <%= @link.get_downvotes.size/@link.get_upvotes.size %>
       <!--
       <%= link_to 'Edit', edit_link_path(@link) %> |
       -->
