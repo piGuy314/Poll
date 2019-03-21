@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://www.Rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -71,9 +71,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-
-
 end
+
+gem 'acts_as_votable', '~> 0.10.0'
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
