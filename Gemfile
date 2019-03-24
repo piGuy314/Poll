@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#jquery_ujs method for Heroku production
+
+
 # Use Devise for user authentication
 gem 'devise', '~> 4.5'
 
