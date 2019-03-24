@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :users do
+    resource :profile
+    resources :polls do
+    resource :comments
+    resources :posts
+    root "links#index"
+  end
+end
   root to: 'links#index'
   resources :links do
     member do
@@ -10,15 +19,7 @@ Rails.application.routes.draw do
 
 
 
-  devise_for :users, controllers: { registrations: 'users/registrations' }
-  resources :users do
-    resource :profile
-    resources :polls do
-    resource :comments
-    resources :posts
-    root "links#index"
-  end
-end
+
 
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
