@@ -9,14 +9,14 @@ Rails.application.routes.draw do
   end
 
 
-  root to: 'links#index'
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
     resources :polls do
     resource :comments
     resources :posts
-    root "posts#index"
+    root "links#index"
   end
 end
 
