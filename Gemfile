@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-#jquery_ujs method for Heroku production
-
 
 # Use Devise for user authentication
 gem 'devise', '~> 4.5'
@@ -91,6 +89,10 @@ end
 group :production do
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
+
+#jquery_ujs method for Heroku production
+#  gem 'rails_12factor', group: :production
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

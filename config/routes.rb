@@ -1,10 +1,10 @@
+
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
     resources :polls do
     resource :comments
-    resources :posts
     root "links#index"
   end
 end
@@ -16,9 +16,6 @@ end
     end
     resources :comments
   end
-
-
-
 
 
   get 'about', to: 'pages#about'
