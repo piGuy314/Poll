@@ -12,8 +12,8 @@ end
   root to: 'links#index'
   resources :links do
     member do
-      put "like", to:    "links#upvote"
-      put "dislike", to: "links#downvote"
+      put "like", to:    'links#upvote'
+      put "dislike", to: 'links#downvote'
     end
     resources :comments
   end
