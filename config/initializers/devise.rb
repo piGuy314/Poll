@@ -21,7 +21,7 @@ Devise.setup do |config|
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
 
-  # Heroku Fix to add Devise Secret Key. 
+  # Heroku Fix to add Devise Secret Key.
   config.secret_key = 'bdbbce368a1de7d80baab32ddbd9e438d4a14324b8cffeaa4ca3eb7134c4437d316f3178a4b8ec57b9606e0113ecfcb87bf074b20583bd712b91fec1cf5e078e'
 
   # Configure the class responsible to send e-mails.
@@ -255,7 +255,7 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
