@@ -57,7 +57,7 @@ gem 'rb-readline'
 
 gem 'autoprefixer-rails'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '4.1.1'
 
 
 gem 'pusher'
@@ -89,9 +89,6 @@ end
 group :production do
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
-
-#jquery_ujs method for Heroku production
-#  gem 'rails_12factor', group: :production
 
 end
 
