@@ -1,3 +1,6 @@
+//= require jquery
+//= require jquery_ujs
+
 /* global $, Stripe */
 //Document ready.
 $(document).on('turbolinks:load', function(){
