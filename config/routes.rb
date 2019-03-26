@@ -10,14 +10,13 @@ Rails.application.routes.draw do
   end
 end
 
-  resources :links do
-    member do
-      put "like", to:    'links#upvote'
-      put "dislike", to: 'links#downvote'
-    end
-    resources :comments
+resources :links do
+  member do
+    put "like", to:    "links#upvote"
+    put "dislike", to: "links#downvote"
   end
-root to: 'links#index'
+end
+root "links#index"
 
 
   get 'about', to: 'pages#about'
