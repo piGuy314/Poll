@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     root "links#index"
   end
 end
-  root to: 'links#index'
+
   resources :links do
     member do
       put "like", to:    'links#upvote'
@@ -17,7 +17,7 @@ end
     end
     resources :comments
   end
-
+root to: 'links#index'
 
 
   get 'about', to: 'pages#about'
