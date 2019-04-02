@@ -59,6 +59,7 @@ gem 'autoprefixer-rails'
 
 gem 'jquery-rails', '4.1.1'
 
+gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'pusher'
 
@@ -74,8 +75,6 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
-gem 'acts_as_votable', '~> 0.10.0'
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -89,9 +88,6 @@ end
 group :production do
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
-
-
- #Heroku Fix?
 
 end
 
