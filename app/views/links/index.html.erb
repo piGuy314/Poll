@@ -30,7 +30,7 @@
       Yae
       <%= link.get_upvotes.size %>
       <% end %>
-      <%= link_to dislike_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
+      <%= button_to dislike_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-down"></span>
       Nay
     <%= link.get_downvotes.size %>
