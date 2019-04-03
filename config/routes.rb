@@ -6,14 +6,14 @@ Rails.application.routes.draw do
     resource :profile
     resources :polls do
     resource :comments
-    root "links#index"
+    
   end
 end
 
 resources :links do
   member do
-    post "like", to:    "links#upvote"
-    post "dislike", to: "links#downvote"
+    put "like", to: "links#upvote"
+    put "dislike", to: "links#downvote"
   end
 end
 root "links#index"
