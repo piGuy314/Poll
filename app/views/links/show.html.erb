@@ -17,7 +17,7 @@
       </h3>
 -->
 
-      <%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+      <%= button_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
       Yea
       <%= @link.get_upvotes.size %>

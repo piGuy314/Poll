@@ -25,12 +25,12 @@
       </h2>
 
     <div class="btn-group">
-      <%= link_to like_link_path(link), method: :PUT, class: "btn btn-default btn-sm" do %>
+      <%= link_to like_link_path(link), method: :post, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
       Yae
       <%= link.get_upvotes.size %>
       <% end %>
-      <%= link_to dislike_link_path(link), method: :PUT, class: "btn btn-default btn-sm" do %>
+      <%= link_to dislike_link_path(link), method: :post, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-down"></span>
       Nay
     <%= link.get_downvotes.size %>
