@@ -30,7 +30,7 @@
               <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
               <% else %>
               <li><%= link_to "Log In", new_user_session_path %></li>
-              <li><%= link_to "Sign up with Basic", new_user_registration_path(plan: 1) %> </li>
+              <li><%= link_to "Create a Free Account", new_user_registration_path(plan: 1) %> </li>
               <%end%>
             </div>
           <ul class="nav navbar-nav navbar-right">
