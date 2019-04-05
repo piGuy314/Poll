@@ -27,7 +27,7 @@
           <div class="nav navbar-nav navbar-right">
             <div class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
-              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
               <% else %>
               <li><%= link_to "Log In", new_user_session_path %></li>
               <li><%= link_to "Sign up with Basic", new_user_registration_path(plan: 1) %> </li>
@@ -35,7 +35,7 @@
             </div>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-              <li><%= link_to "Community",links_path %></li>
+              <li><%= link_to "Polls",links_path %></li>
               <li><%= link_to "My Profile", user_path(current_user.id) %></li>
             <% end %>
             <li><%= link_to "About Poll", about_path%></li>
