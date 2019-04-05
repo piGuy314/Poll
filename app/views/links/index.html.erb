@@ -20,9 +20,17 @@
   <% @links.each do |link| %>
     <div class="links-container">
     <div class ="well ">
+
       <h2>
-      <%= link_to link.title, link %><br>
+      <%=link.title%><br>
       </h2>
+
+      <!--
+      #Link to poll in title
+        <h2>
+        <%= link_to link.title, link %><br>
+        </h2>
+      -->
 
     <div class="btn-group">
       <%= button_to like_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
@@ -39,6 +47,8 @@
 <h3>
   <small class="author">Submitted <%= time_ago_in_words(link.created_at)%> ago</br>by:
   <%= link.user.email %> </small>
+  <br>
+  <small class="author"><%= link_to "Deets", link %>
 </h3>
   </div>
 </div>
