@@ -2,41 +2,45 @@
   <%= devise_error_messages! %>
 
 <%= hidden_field_tag 'plan', params[:plan] %>
-
-  <div class="field form-group">
-    <div class="text-center">
-    <h2>Sign up for our Pro Membership</h2>
-  </div>
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %>
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-  </div>
-<!-- credit card info -->
+<h2>Premium content isn't availabe yet</h2>
+<!--
 <div class="field form-group">
-  <%= label_tag :card_number, "Credit Card Number" %>
-  <%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
+<div class="text-center">
+<h2>Sign up for our Pro Membership</h2>
+</div>
+
+<%= f.label :email %>
+<%= f.email_field :email, autofocus: true, class: 'form-control' %>
 </div>
 <div class="field form-group">
-  <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-  <%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
+<%= f.label :password %>
+<% if @minimum_password_length %>
+<em>(<%= @minimum_password_length %> characters minimum)</em>
+<% end %>
+<%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+</div>
+<div class="field form-group">
+<%= f.label :password_confirmation %>
+<%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+</div>
+<!-- credit card info -->
+<!--
+<div class="field form-group">
+<%= label_tag :card_number, "Credit Card Number" %>
+<%= text_field_tag :card_number, nil, name: nil, class: "form-control" %>
+</div>
+<div class="field form-group">
+<%= label_tag :card_code, "Security Code on Card (CVV)" %>
+<%= text_field_tag :card_code, nil, name: nil, class: "form-control" %>
 </div>
 <div class="form-group">
-  <%= label_tag :card_month, "Card Expiration" %>
-  <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
-  <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
+<%= label_tag :card_month, "Card Expiration" %>
+<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
+<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
 </div>
 
-  <div class="actions form-group">
-    <%= f.submit "Sign Up", class: 'btn btn-success', id: 'form-signup-btn'%>
-  </div>
+<div class="actions form-group">
+<%= f.submit "Sign Up", class: 'btn btn-success', id: 'form-signup-btn'%>
+</div>
+-->
 <% end %>
