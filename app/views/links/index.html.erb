@@ -21,16 +21,10 @@
     <div class="links-container">
     <div class ="well ">
 
-      <h2>
-      <%=link.title%><br>
-      </h2>
-
-      <!--
-      #Link to poll in title
         <h2>
         <%= link_to link.title, link %><br>
         </h2>
-      -->
+
 
     <div class="btn-group">
       <%= button_to like_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>

@@ -10,8 +10,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find( params[:id] )
   end
-end
 
-def destroy
-  @user = User.find( params[:id] )
+
+  def destroy
+    @user = User.find( params[:id] )
+  end
 end
