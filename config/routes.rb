@@ -1,13 +1,13 @@
-
-
 Rails.application.routes.draw do
+  resources :comments
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
     resources :polls do
     resource :comments
-    
+
   end
+  resources :comments
 end
 
 resources :links do

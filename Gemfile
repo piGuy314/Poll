@@ -1,4 +1,4 @@
-source 'http://www.Rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -65,6 +65,8 @@ gem 'pusher'
 
 gem 'chartkick'
 
+gem 'simple_form', '~> 4.1'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
@@ -90,6 +92,3 @@ group :production do
   gem 'pg', '0.18.4'
 
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
