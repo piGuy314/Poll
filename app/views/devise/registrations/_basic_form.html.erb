@@ -6,6 +6,11 @@
   <%= hidden_field_tag 'plan', params[:plan] %>
 
   <div class="field form-group">
+    <%= f.label :Username %><br />
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+  </div>
+  
+  <div class="field form-group">
   <%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true, class: 'form-control' %>
   </div>

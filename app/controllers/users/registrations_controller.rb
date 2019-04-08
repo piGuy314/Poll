@@ -1,4 +1,4 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController#update
   #Extend default devise gem behavior so that
   #users signing up with the Pro account (plan ID 2)
   #save with a special Stripe subscription function.
