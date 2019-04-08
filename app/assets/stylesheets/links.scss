@@ -1,11 +1,19 @@
 // Place all the styles related to the links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 html, body {
-    height: 100%;
-    overflow: auto;
-    margin: 0;
-}
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+  }
+
+#details {
+      height: 400px;
+      overflow: auto;
+      margin: 0;
+  }
+
 
 links-container {
   max-width:300px;
