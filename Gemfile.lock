@@ -90,6 +90,8 @@ GEM
       sass (>= 3.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (4.1.1)
+      activesupport (>= 4.2)
     hirb (0.7.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -252,6 +254,7 @@ DEPENDENCIES
   devise (~> 4.5)
   figaro (= 1.1.1)
   font-awesome-sass (= 4.6.2)
+  groupdate
   hirb (= 0.7.3)
   jbuilder (~> 2.5)
   jquery-rails (= 4.1.1)

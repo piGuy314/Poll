@@ -18,6 +18,10 @@ resources :links do
 end
 root "links#index"
 
+namespace :charts do
+  get "new-votes"
+  get "new-users"
+end
 
   get 'about', to: 'pages#about'
   resources :contacts, only: :create

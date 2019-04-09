@@ -1,3 +1,5 @@
+
+
 <div id='community'>
 <div class="container">
   <div class="row">
@@ -5,6 +7,8 @@
     <h1 class="text-center">Poll Community</h1>
       <p class="text-center">Welcome to the Poll community!</p>
       <ul class="list-unstyled">
+        <h2>Users</h2>
+        <%= line_chart User.group_by_day(:created_at).count %>
         <% @users.each do |user| %>
         <% if user.profile %>
         <li>

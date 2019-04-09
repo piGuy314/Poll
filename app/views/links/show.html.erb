@@ -9,15 +9,12 @@
         <strong>Title:</strong>
         <%= @link.title %>
       </h1>
-
-
 <!--
       <h3>
         <strong>Url:</strong>
         <%= @link.url %>
       </h3>
 -->
-
       <%= button_to like_link_path(@link), :method => :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
       Yea
@@ -38,9 +35,6 @@
       <h3 class="comments_title">
         <%= @link.comments.count %> Comments
       </h3>
-
-
-
       <%= simple_form_for [@link, Comment.new]  do |f| %>
         <div class="field">
           <%= f.text_area :body, class: "form-control" %>
@@ -64,7 +58,10 @@
 <div class='well'>
       <%= render :partial => @link.comments.order('created_at DESC') %>
     </div>
+
  </div>
+ <h2>Votes</h2>
+ <%= line_chart charts_new_votes_path  %>
 </div>
 </div>
 </div>

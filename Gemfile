@@ -67,6 +67,12 @@ gem 'chartkick'
 
 gem 'simple_form', '~> 4.1'
 
+gem 'chartkick'
+
+gem 'groupdate'
+
+
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
