@@ -20,7 +20,7 @@
       <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
         <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-sm btn-block'%>
         <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
-        <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
+        <%= link_to "Account Settings", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
         <%= link_to 'Back to Polls', links_path, class: 'btn btn-default btn-sm btn-block'%>
   </div>
 </div>
