@@ -1,60 +1,52 @@
 <div id="content" >
   <div id="left">
-    <% if user_signed_in? %>
-          <div class="text-center">
-            <h2> My Profile </h2>
-            </br>
-            <%= current_user.name  %>
-          </div>
-          <%if current_user.profile %>
-          <%= link_to "Create a Poll", new_link_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-          <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-          <%= link_to "View your profile", user_path(current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-          <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-lg btn-block'%>
-          <% else %>
-          <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-          <% end %>
-          <% end %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="text-center">
+      <h2> My Profile </h2>
+      <h3><%= current_user.name  %></h3>
+    </div>
+      <% if current_user.profile %>
+      <%= link_to "Create a Poll", new_link_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "View your profile", user_path(current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-lg btn-block'%>
+      <% else %>
+      <%= link_to "Create your profile!", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <% end %>
+  <% end %>
+</div>
 
 <div id="middle">
   <% @links.each do |link| %>
-    <div class="links-container">
+  <div class="links-container">
     <div class ="well ">
-
-        <h2>
-        <%= link_to link.title, link%><br>
-        </h2>
-
-
-    <div class="btn-group">
-      <%= button_to like_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
-      <span class="glyphicon glyphicon-chevron-up"></span>
-      Yae
-      <%= link.get_upvotes.size %>
-      <% end %>
-      <%= button_to dislike_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
-      <span class="glyphicon glyphicon-chevron-down"></span>
-      Nay
-    <%= link.get_downvotes.size %>
-  <% end %>
-  <br>
-<h3>
-  <small class="author">Submitted <%= time_ago_in_words(link.created_at)%> ago</br>by:
-  <%= link.user.email %> </small>
-  <br>
-  <br>
-  <small class="author"><%= link_to "Poll Details", link %>
-</h3>
-  </div>
+      <h2><%= link_to link.title, link%><br></h2>
+      <div class="btn-group">
+        <%= button_to like_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        Yae
+        <%= link.get_upvotes.size %>
+        <% end %>
+        <%= button_to dislike_link_path(link), :method => :put, class: "btn btn-default btn-sm" do %>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        Nay
+        <%= link.get_downvotes.size %>
+        <% end %>
+      <br>
+      <h3>
+        <small class="author">Submitted <%= time_ago_in_words(link.created_at)%> ago</br>by:
+        <%= link.user.name %> </small>
+      <br>
+      <br>
+        <small class="author"><%= link_to "Poll Details", link %>
+      </h3>
+    </div>
 </div>
 <% end %>
-
 </br>
 </br>
 </br>
 </br>
 </br>
-
- </div>
+</div>
 </div>

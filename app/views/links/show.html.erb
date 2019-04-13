@@ -61,7 +61,7 @@
 
  </div>
  <h2>Votes</h2>
- <%= line_chart charts_new_votes_path  %>
+ <%= line_chart ActsAsVotable::Vote.all.group_by_day(:created_at).count %>
 </div>
 </div>
 </div>
