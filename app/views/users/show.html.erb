@@ -1,13 +1,12 @@
-<div id="content" >
-  <div id="left">
-    <h1 class ="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
-    <h3 class ="text-center">(<%= current_user.name  %>)</h3>
-    <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
-    <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-sm btn-block'%>
-    <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
-    <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
-    <%= link_to 'Back to Polls', links_path, class: 'btn btn-default btn-sm btn-block'%>
 
+<div id="left">
+  <h1 class ="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+  <h3 class ="text-center">(<%= current_user.name  %>)</h3>
+  <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
+  <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-sm btn-block'%>
+  <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
+  <%= link_to "Edit your account", edit_user_registration_path, class: 'btn btn-default btn-sm btn-block'%>
+  <%= link_to 'Back to Polls', links_path, class: 'btn btn-default btn-sm btn-block'%>
 </div>
 
 <div id="middle">
@@ -16,7 +15,6 @@
       <h3>Gender: <%= @user.profile.gender %><br></h3>
       <h3>Postal Code: <%= @user.profile.zip_code %><br></h3>
       <h3>About Me:<br><%= @user.profile.description %><br></h3>
-
 </div>
 <h5> *Completing all the fields in your profile helps us chart and graph the user demographics
   related to the polls. Your personal identify will not be shared or displayed.
@@ -27,7 +25,7 @@
 </br>
 </br>
 </div>
-</div>
+
 
 <!--
 <% if current_user.plan_id == 2 %> <br>
