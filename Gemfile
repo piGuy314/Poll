@@ -67,8 +67,6 @@ gem 'chartkick'
 
 gem 'simple_form', '~> 4.1'
 
-gem 'chartkick'
-
 gem 'groupdate'
 
 
