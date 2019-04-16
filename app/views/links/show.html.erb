@@ -25,12 +25,27 @@
       <span class="glyphicon glyphicon-chevron-down"></span>
       Nay
       <%= @link.get_downvotes.size %>
-
       <% end %>
+      <div class="container">
+        <div class="row">
 
-      <div class="text-center">
-        <%= link_to 'Back to Polls', links_path, class: "btn btn-sm btn-success"  %>
+
+      <%= link_to 'Back to Polls', links_path, class: "btn btn-sm btn-success"  %>
+      <% if @link.user == current_user -%>
+        <% end %>
+</br>
+</br>
+        <%= link_to 'Edit Your Poll', edit_link_path(@link), class: "btn btn-default" %>
+        <%= link_to 'Delete Poll', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+
+
+
       </div>
+      </div>
+
+
+      </br>
+      </br>
 
       <h3 class="comments_title">
         <%= @link.comments.count %> Comments
@@ -47,12 +62,6 @@
       <%= link_to 'Edit', edit_link_path(@link) %> |
       -->
 
-      <% if @link.user == current_user -%>
-    	<div class="btn-group">
-    		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
-    		<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
-    	</div>
-      <% end %>
 
 <div id='details'>
 <div class='well'>
