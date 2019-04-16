@@ -1,6 +1,5 @@
 <div id="content" >
   <div id="left">
-    <h1 class ="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
     <h3 class ="text-center">(<%= current_user.name  %>)</h3>
     <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
     <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-sm btn-block'%>
@@ -11,7 +10,7 @@
 
   <div id="profile-mid">
   <div id="well">
-    <h1 class="text-center">Your Profile Demagraphics.</h1>
+    <h1 class="text-center"><h1 class ="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %>'s Profile</h1>
         <h3>Gender: <%= @user.profile.gender %><br></h3>
         <h3>Postal Code: <%= @user.profile.zip_code %><br></h3>
         <h3>About Me:<br><%= @user.profile.description %><br></h3>
