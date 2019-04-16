@@ -36,8 +36,11 @@
       <h3>
         <small class="author">Submitted <%= time_ago_in_words(link.created_at)%> ago</br>by:
         <%= link.user.name %> </small>
-      <br>
-      <br>
+        </h3>
+        <h3 class="comments_title">
+          <%= link.comments.count %> Comments
+        </h3>
+        <h3>
         <small class="author"><%= link_to "Poll Details", link %>
       </h3>
     </div>
