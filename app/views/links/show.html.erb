@@ -26,22 +26,15 @@
       Nay
       <%= @link.get_downvotes.size %>
       <% end %>
-      <div class="container">
-        <div class="row">
 
-
-      <%= link_to 'Back to Polls', links_path, class: "btn btn-sm btn-success"  %>
-      <% if @link.user == current_user -%>
+      <div class="text-center">
+        <%= link_to 'Back to Polls', links_path, class: "btn btn-sm btn-success"  %>
+        <% if @link.user == current_user -%>
+          <%= link_to 'Edit Your Poll', edit_link_path(@link), class: "btn btn-default" %>
+          <%= link_to 'Delete Poll', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
         <% end %>
-</br>
-</br>
-        <%= link_to 'Edit Your Poll', edit_link_path(@link), class: "btn btn-default" %>
-        <%= link_to 'Delete Poll', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
-
-
-
       </div>
-      </div>
+
 
 
       </br>
