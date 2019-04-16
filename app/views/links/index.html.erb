@@ -2,7 +2,6 @@
   <div id="left">
   <% if user_signed_in? %>
     <div class="text-center">
-      <h2> My Profile </h2>
       <h3><%= current_user.name  %></h3>
     </div>
       <% if current_user.profile %>

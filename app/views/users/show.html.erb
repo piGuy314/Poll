@@ -1,6 +1,6 @@
 <div id="content" >
   <div id="left">
-    <h3 class ="text-center">(<%= current_user.name  %>)</h3>
+    <h3 class ="text-center"><%= current_user.name  %></h3>
     <%= link_to "Create a Poll!",new_link_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block'%>
     <%= link_to "The Poll community", users_path, class: 'btn btn-default btn-sm btn-block'%>
     <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-sm btn-block' %>
