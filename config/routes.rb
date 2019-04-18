@@ -23,6 +23,10 @@ namespace :charts do
   get "new-users"
 end
 
+  get 'yeaornay', to: 'links#yeaornay'
+  get 'choice', to: 'links#choice'
+  get 'image', to: 'links#image'
+  get 'scale', to: 'links#scale'
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
   get 'contact-us', to: 'contacts#new', as: 'new_contact'

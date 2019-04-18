@@ -19,6 +19,22 @@ class LinksController < ApplicationController
     @link = current_user.links.build
   end
 
+  def yeaornay
+    @link = current_user.links.build
+  end
+
+  def choice
+    @link = current_user.links.build
+  end
+
+  def image
+    @link = current_user.links.build
+  end
+
+  def scale
+    @link = current_user.links.build
+  end
+
   # GET /links/1/edit
   def edit
   end

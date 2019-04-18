@@ -2,11 +2,13 @@
 <div class ="row">
   <div class="col-md-6 col-md-offset-3">
     <div class ="well">
-      <h1 class="text-center">Create a Yea or Nay Poll</h1>
+      <h1 class="text-center"> Select a survey type </h1>
+      </br>
+      <%= link_to "Create a Yea or Nay Poll", yeaornay_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "Create a Multiple Choice Poll", choice_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "Create an Image Poll", image_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+      <%= link_to "Create a Scale Poll", scale_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
 
-      <%= render 'form', link: @link %>
-
-      <%= link_to 'Back', links_path %>
     </div>
   </div>
 </div>

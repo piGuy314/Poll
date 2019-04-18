@@ -35,3 +35,7 @@
 *
 *
 *
+
+  Premium Payment options
+* Different types of polls cost money. i.e. multiple choice, interactive
+  pop out polls, images, shareable to other social media sites. 
