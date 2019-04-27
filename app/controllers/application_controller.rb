@@ -12,3 +12,7 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:stripe_card_token, :email, :password, :password_confirmation) }
     end
 end
+
+def links_params
+  params.require(:link).permit(:title)
+end 

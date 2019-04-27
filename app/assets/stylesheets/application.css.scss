@@ -55,6 +55,22 @@ h4 {
   opacity: 1;
 }
 
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: left;
+  padding: 6px;
+  border: ridge;
+  border-color: lightgray;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 1px;
+  font-size: 17px;
+  width: 500px;
+}
+
+
+
+
 // User Index Page styles
 .user-index-avatar {
 width: 128px;

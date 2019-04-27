@@ -20,10 +20,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to image_tag('Poll2.png'), root_path, class: "navbar-left", size: "20" %>
+          <%= link_to image_tag('Poll2.png'), root_path, class: "navbar-left", size: "20"%>
         </div>
-        <br>
-        <ul><input type="text" placeholder="Search.."></ul>
+
+        <!--
+        <div class="topnav input[type=text]">
+        <input type="text" placeholder="Search">
+        -->
+<div class="topnav input[type=text]">
+
+  <%= form_for "",url: links_path, role: "search", method: :get do %>
+  <%= text_field_tag :search, @search_term,placeholder: "Search..." %>
+  <% end %>
+</div>
+
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <div class="nav navbar-nav navbar-right">
             <div class="nav navbar-nav navbar-right">
@@ -45,7 +55,7 @@
             <% end %>
             <% end %>
             <li><%= link_to "About Poll", about_path%></li>
-
+            </div>
           </ul>
           <!--
           <%= form_tag("#", method: 'get', class: 'navbar-form navbar-right') do %>
