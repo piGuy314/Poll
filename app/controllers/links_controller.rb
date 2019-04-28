@@ -5,15 +5,12 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-
-
-      @links = Link.all
-
-if params[:search]
-  @search_term = params[:search]
-  @links= @links.search_by(@search_term)
+    @links = Link.all.order('created_at DESC')
+    if params[:search]
+      @search_term = params[:search]
+      @links= @links.search_by(@search_term)
+    end
   end
-end
 
 
   # GET /links/1
