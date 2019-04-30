@@ -30,7 +30,7 @@
 <div class="topnav input[type=text]">
 
   <%= form_for "",url: links_path, role: "search", method: :get do %>
-  <%= text_field_tag :search, params[:search],placeholder: "Search..." %>
+  <%= text_field_tag :search, @search_term,placeholder: "Search..." %>
   <% end %>
 </div>
 
