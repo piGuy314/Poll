@@ -16,6 +16,30 @@
     <%= f.text_field :title, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :topic %> <br>
+    <%= f.select :topic, [['None','none'],
+    ['Beauty','beauty'],
+    ['Books','books'],
+    ['Computers','computers'],
+    ['Dreams','dreams'],
+    ['Education','education'],
+    ['Food','food'],
+    ['Games','games'],
+    ['Health','health'],
+    ['Money','money'],
+    ['Movies','movies'],
+    ['Music','music'],
+    ['Politics','politics'],
+    ['Relationships','relationships'],
+    ['Sports','sports'],
+    ['Shopping','shopping'],
+    ['Travel','travel'],
+    ['TV','tv'],
+    ['Work','work'],
+    ['Misc', 'misc']] , {}, class: 'form-control' %>
+  </div>
+
   <br>
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
