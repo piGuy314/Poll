@@ -24,6 +24,9 @@ class LinksController < ApplicationController
     @link = current_user.links.build
   end
 
+  def topic
+  end 
+
   def yeaornay
     @link = current_user.links.build
   end
