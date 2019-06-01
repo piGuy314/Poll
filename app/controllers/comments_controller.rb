@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   def create
     @link = Link.find(params[:link_id])
     @comment = @link.comments.new(comment_params)
-    #need to figure out user association to comments. 
+    #need to figure out user association to comments.
 
     respond_to do |format|
       if @comment.save

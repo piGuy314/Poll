@@ -31,7 +31,7 @@
 
       <div class="text-center">
         <%= link_to 'Back to Polls', links_path, class: "btn btn-sm btn-success"  %>
-        <% if @link.user == current_user -%>
+        <% if @link.user == current_user %>
           <%= link_to 'Edit Your Poll', edit_link_path(@link), class: "btn btn-default" %>
           <%= link_to 'Delete Poll', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
         <% end %>
