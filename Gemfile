@@ -7,7 +7,7 @@ end
 
 
 # Use Devise for user authentication
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 
 #Use Stripe for payment processing
 gem 'stripe', '1.48.0'
